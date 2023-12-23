@@ -9,11 +9,15 @@ import SwiftUI
 
 struct StoreItemView: View {
     
+    // MARK: - Attributes
+    
     let store: StoreType
+    
+    // MARK: - BodyView
     
     var body: some View {
         HStack {
-            Image(store.image)
+            Image(store.logoImage)
                 .resizable()
                 .scaledToFit()
                 .cornerRadius(25)
@@ -25,9 +29,6 @@ struct StoreItemView: View {
             }
             
             Spacer()
-        }
-        .onTapGesture {
-            print("clicou em \(store.name)")
         }
     }
 }
